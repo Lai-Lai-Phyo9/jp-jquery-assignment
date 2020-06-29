@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+	<!-- <style type="text/css">
+		.one{
+			background-color: green;
+			color: white;
+		}
+	</style> -->
+</head>
+<body>
+	<script type="text/javascript" src="bootstrap/js/jquery.min.js"></script>
+	<script type="text/javascript" src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			console.log('document_ready');
+			$('.one').addClass('bg-success text-light d-inline');
+			$('.two').addClass('bg-warning text-dark d-block');
+			$('.three').addClass('bg-danger  display-3');
+			});
+	</script>
+
+	<p class="one">Hello World One</p>
+	<p class="two">Hello World Two</p>
+	<p class="three">Hello World Three</p>
+
+</body>
+</html>

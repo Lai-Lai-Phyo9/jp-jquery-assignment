@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+	<!-- Jumbotron -->
+	<div class="jumbotron text-center">
+		<h1>Show /Hide Function</h1>	
+	</div>
+	<div class="container">
+	<!-- Show/Hide/Toggle -->
+		<div class="showtoggle my-5" >
+			<h2>Show/Hide Toggle</h2>
+			<span class="badge badge-primary">Auto Hide</span>
+			<span class="badge badge-dark">Click To Hide</span>
+			<span class="badge badge-success">Toggle between hidding and showing</span>
+			<br><br>
+			<button type="button" class="btn btn-secondary">HIDE</button>
+			<button type="button" class="btn btn-primary" id="show">SHOW</button>
+			<button type="button" class="btn btn-success" id="toggle">TOGGLE</button>
+		</div>
+	<!-- Fade In/Out/Toggle -->
+		<div class="fadetoggle my-5">
+			<h2>Fade In/Out/Toggle</h2>
+			<span class="badge badge-warning fadein-normal" style="display: none;">Fade In</span>
+			<span class="badge badge-warning fadein-fast" style="display: none;">Fade In fast</span>
+			<span class="badge badge-warning fadein-slow" style="display: none;">Fad In slow</span>
+			<span class="badge badge-warning fadein-second" style="display: none;">Fade In 300ms</span>
+			<br><br>
+			<span class="badge badge-danger fadeout-normal">Fade Out</span>
+			<span class="badge badge-danger fadeout-fast">Fade Out fast</span>
+			<span class="badge badge-danger fadeout-slow">Fad Out slow</span>
+			<span class="badge badge-danger fadeout-second">Fade Out 300ms</span>
+			<br><br>
+			<span class="badge badge-danger fadetoggle-normal">Fade Toggle</span>
+			<span class="badge badge-danger fadetoggle-fast">Fade Toggle fast</span>
+			<span class="badge badge-danger fadetoggle-slow">Fad Toggle slow</span>
+			<span class="badge badge-danger fadetoggle-second">Fade Toggle 300ms</span>
+			<br><br>
+			<button type="button" class="btn btn-warning" id="fadein">FADE IN</button>
+			<button type="button" class="btn btn-danger" id="fadeout">FADE OUT</button>
+			<button type="button" class="btn btn-dark" id="fadetoggle">FADE TOGGLE</button>
+		</div>
+	<!-- Slide Up/Down/Toggle -->
+		<div class="container">
+			<h1>Slide In / Down / Toggle</h1>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="bg-info text-center text-light" id="slideup">Click to slide up panel</div>
+					<div class="bg-light py-5 text-center slideupText"> Slide up text</div>	
+				</div>
+				<div class="col-md-4">
+					<div class="bg-primary text-center text-light" id="slidedown">Click to slide down panel</div>
+					<div class="bg-light py-5 text-center slidedownText" style="display: none;"> Slide Down text</div>		
+				</div>
+				<div class="col-md-4">
+					<div class="bg-success text-center text-light" id="slidetoggle">Click to slide toggle panel</div>
+					<div class="bg-light py-5 text-center slidetoggleText"> Slide toggle text</div>	
+				</div>
+			</div>
+		</div>
+	<!-- Animation -->
+	<div class="container">
+		<div class="row mt-5">
+			<h3>Animation</h3>
+			<div class="col-12">
+				<div class="bg-success h-50 mb-5 text-white w-25 text-center position-absolute firstanimatebox">
+					Animation Div
+				</div>
+				<button class="btn btn-success d-block mt-5" id="animatebtn"> Click to Animate</button>	
+			</div>
+		</div>
+	</div>
+	<!-- JQuery -->
+	<script type="text/javascript" src="bootstrap/js/jquery.min.js"></script>
+	<script type="text/javascript" src="bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			console.log('document_ready');
+
+			// AUTO HIDE
+			$('.badge-primary').hide(500);
+
+			//HIDE
+			$('.btn-secondary').click(function(){
+				$('.badge-dark').hide(500);	
+			});
+
+			//SHOW
+			$('#show').click(function(){
+				$('span.badge-primary').show(500);
+			});
+
+			//toggle
+			$('#toggle').click(function(){
+				$('span.badge-success').toggle();
+			});
+
+			//Fade In
+			$('#fadein').click(function(){
+				$('span.fadein-normal').fadeIn();
+				$('span.fadein-fast').fadeIn('fast');
+				$('span.fadein-slow').fadeIn('slow');
+				$('span.fadein-second').fadeIn(300);
+			});
+
+			//fade Out
+			$('#fadeout').click(function() {
+				$('span.fadeout-normal').fadeOut();
+				$('span.fadeout-fast').fadeOut('fast');
+				$('span.fadeout-slow').fadeOut('slow');
+				$('span.fadeout-second').fadeOut(300);
+			});
+
+			//fade toggle
+			$('#fadetoggle').click(function() {
+				$('span.fadetoggle-normal').fadeToggle();
+				$('span.fadetoggle-fast').fadeToggle('fast');
+				$('span.fadetoggle-slow').fadeToggle('slow');
+				$('span.fadetoggle-second').fadeToggle(300);
+			});
+
+			//Slide up
+			$('#slideup').click(function() {
+				$('.slideupText').slideUp('slow');
+			});
+
+			//Slide down
+			$('#slidedown').click(function() {
+				$('.slidedownText').slideDown('slow');
+			});
+
+			//Slide toggle
+			$('#slidetoggle').click(function() {
+				$('.slidetoggleText').slideToggle('slow');
+			});
+
+			//Animation
+			$('#animatebtn').click(function() {
+				$('.firstanimatebox').animate({
+					left: '500px',
+					opacity: 0.5
+				});			
+			});
+		});
+	</script>
+</body>
+</html>

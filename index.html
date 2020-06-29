@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQuery Intro</title>
+
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+
+	<style type="text/css">
+		.big{
+			text-shadow: 2px 2px 4px #000;
+			color: yellow;
+			text-align: center;
+		}
+	</style>
+
+</head>
+<body>
+	<!-- JQuery -->
+	<script type="text/javascript" src="bootstrap/js/jquery.min.js"></script>
+	<script type="text/javascript" src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			console.log('document_ready');
+			// readyfn();
+			$('#content').find('h3').html('new text for h3!');
+
+			// $('#content').find('p').html('Hello World');
+			$('p').html('Hello World');
+			$('#content p:first').html('New <strong>first</strong> paragraph!');
+			
+
+			// setting an individual property
+			$('#content h3').css('font-size', '50px');
+
+			//setting a multiple properties
+			$('p').css({'font-size':'20px','color':'blue'});
+
+			//addClass
+			$('h1').addClass('big');
+
+
+			//removeClass
+			$('h1').removeClass('hello');
+
+			//single attribute
+			$('a.facebook').attr('href','https://www.facebook.com/');
+
+			//multiple attribute
+			$('a.instagram').attr({
+				'title': 'Instagram',
+				'href': 'https://www.instagram.com/'
+			});
+
+
+			$('h1').click(function(){
+				console.log('click h1')
+			});
+
+
+			$('h3').bind('click', function(){
+				// console.log('click h3');
+				$('h3').addClass('text-success');
+			});
+
+
+			$('p').bind({
+				'click' : function(){
+					console.log('click p');
+				},
+				'mouseover' : function(){
+					console.log('mouseover p');
+				}
+
+			});
+
+			//get text
+			$('#showtextBtn').click(function() {
+				var text = $('h1').text();
+				console.log(text);
+			});
+
+			//get html
+			$('#showhtmlBtn').click(function(){
+				var html= $('h1').html();
+				console.log(html);
+			});
+
+			//get attribute
+			$('#showattributeBtn').click(function(){
+				var attrtext=$('.google').attr('href');
+				console.log(attrtext);
+			});
+
+			//get value
+			$('#showvalueBtn').click(function(){
+				var valtext=$('#name').val();
+				console.log(valtext)
+
+			});
+
+			//settext
+			$('#settextBtn').click(function(){
+				$('h1').text('JP Batch-1');
+
+			});
+			//sethtml
+			$('#sethtmlBtn').click(function(){
+				$('h1').html('JP <i>Batch-1</i>');
+			})
+
+			//set attribute
+			$('#setattributeBtn').click(function(event) {
+				$('.google').attr('href','https://www.facebook.com')			
+			});
+
+			$('#setvalueBtn').click(function(event) {
+				$('#email').val('admin@gmail.com');
+			});
+
+		});
+
+		// $(function(){
+		// 	console.log('shorthand for document ready function');
+	
+		// });
+
+		// function readyfn(){
+		// 	console.log('this is readyfn');
+		// }
+		// $(document).ready(readyfn);
+
+
+		//JS
+		// document.getElementsByClassName('aa');
+
+		// JQuery
+		// $('.aa');
+		// $('div.aa');
+		// $('div#contents ul.people li')
+		
+
+	</script>
+
+	<!-- div>
+		<p class="aa"></p>
+	</div>
+
+	<section>
+		<p class="aa"></p>
+	</section>
+ -->
+ 	<!-- <div id="contents">
+ 		<ul class="people">
+ 			<li>Ko Ko</li>
+ 			<li>Aye Aye</li>
+ 			<li>Hla Hla</li>
+ 		</ul>
+ 		<ul class="social">
+ 			<li>Facebook</li>
+ 			<li>Instagram</li>
+ 			<li>Viber</li>
+ 		</ul>
+ 	</div> -->
+ 	<button class="btn btn-success" id="showtextBtn">Show Text</button>
+ 	<button class="btn btn-secondary" id="showhtmlBtn">Show Html</button>
+ 	<button class="btn btn-warning" id="showattributeBtn">Show Attribute</button>
+
+
+ 	<div class="row">
+ 		<div class="col-12">
+ 			<form class="form-inline">
+ 				<div class="form-group">
+ 					<label for="name"> Name:</label>
+ 					<input type="text" name="name" class="form-control" id="name" placeholder="Enter Name: ">
+ 				</div>
+ 				<button type="button" class="btn btn-primary mb-2" id="showvalueBtn">Save</button>
+ 			</form>
+ 		</div>	
+ 	</div>
+
+ 	<button class="btn btn-success" id="settextBtn">Set Text</button>
+ 	<button class="btn btn-secondary" id="sethtmlBtn">Set Html</button>
+ 	<button class="btn btn-success" id="setattributeBtn">Set Attribute</button>
+ 	<button class="btn btn-primary" id="setvalueBtn">Set Value</button>
+ 	<div class="row">
+ 		<div class="col-12">
+ 			<form class="form-inline">
+ 				<div class="form-group">
+ 					<label for="email"> Email:</label>
+ 					<input type="text" name="email" class="form-control" id="email" placeholder="Enter Name" value="lailaiphyo.tu@gmail.com">
+ 				</div>
+ 				<button type="button" class="btn btn-primary mb-2" id="showvalueBtn">Save</button>
+ 			</form>
+ 		</div>	
+ 	</div>
+
+
+
+ 	<h1 class="hello">Hello <b>World</b></h1> 
+
+ 	<a href="https://www.google.com/" target="_blank" title="google"  class="google"> Google </a>
+
+ 	<a href="" class="facebook"> Facebook </a>
+ 	 <a href="" class="instagram"> Instagram </a>
+ 	<div id="content">
+ 		<h3>Testing</h3>
+ 		<p>
+ 			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+ 			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+ 			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+ 			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+ 			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+ 			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+ 		</p>
+ 		<p>
+ 			dolor in reprehenderit in voluptate velit esse
+ 			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+ 			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+ 		</p>
+ 		<p>
+ 			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+ 			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+ 			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+ 			consequat. Duis aute irure 
+ 		</p>
+ 	</div>
+
+
+
+ 	
+ 	<!-- Jumbotron -->
+	<!-- <div class="jumbotron">
+		<h1>Show/Hide Function</h1>	
+	</div> -->
+
+	<!-- Show/Hide/Toggle -->
+	<!-- <div class="shtoggle" >
+		<h2>Show/Hide Toggle</h2>
+		<span class="badge badge-primary">Auto Hide</span>
+		<span class="badge badge-dark">Click To Hide</span>
+		<span class="badge badge-success">Toggle between hidding and showing</span>
+		<br><br>
+		<button type="button" class="btn btn-secondary">HIDE</button>
+		<button type="button" class="btn btn-primary">PRIMARY</button>
+		<button type="button" class="btn btn-success">SUCCESS</button>
+		
+	</div> -->
+
+	<!-- Fade In/Out/Toggle -->
+	<!-- <div class="fadetoggle">
+		<h2>Fade In/Out/Toggle</h2>
+		<span class="badge badge-danger">Fade Out</span>
+		<span class="badge badge-danger">Fade Out fast</span>
+		<span class="badge badge-danger">Fad Out 100ms</span>
+		<span class="badge badge-danger">Fade Out 300ms</span>
+		<br><br>
+		<span class="badge badge-danger">Fade Toggle</span>
+		<span class="badge badge-danger">Fade Toggle fast</span>
+		<span class="badge badge-danger">Fad Toggle slow</span>
+		<span class="badge badge-danger">Fade Toggle 300ms</span>
+		<br><br>
+		<button type="button" class="btn btn-warning">FADE IN</button>
+		<button type="button" class="btn btn-danger">FADE OUT</button>
+		<button type="button" class="btn btn-dark">FADE TOGGLE</button>
+		
+	</div> -->
+
+	<!-- Slide Up/Down/Toggle -->
+	<!-- <div class="container">
+		<div class="row">
+			<div class="col-md-4">
+
+				
+			</div>
+		</div>
+		
+	</div>
+ -->
+
+
+
+
+
+
+
+
+
+</body>
+</html>

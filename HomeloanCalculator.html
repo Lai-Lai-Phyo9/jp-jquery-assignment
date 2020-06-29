@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home Loan Calculator</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+	<!-- Jumbotron -->
+	<div class="jumbotron">
+		<h1 class="display-3 text-center">Home Loan Calculator</h1>
+	</div>
+	<!-- Input -->
+	<div class="container">
+		<form>
+			<div class="form-group row">
+				<label for="loan" class="col-sm-2 col-form-label">Loan Amount:</label>
+			    <div class="col-sm-10">	
+					<input type="number"  class="form-control" id="loan">
+			    </div>
+			</div>
+			<div class="form-group row">
+			    <label for="interest" class="col-sm-2 col-form-label">Interest Rate:</label>
+			    <div class="col-sm-10">
+			    	<input type="number" class="form-control" id="interest">
+			    </div>
+			</div>
+			<div class="form-group row">
+			    <label for="year" class="col-sm-2 col-form-label">Year of Loan Amount:</label>
+			    <div class="col-sm-10">
+			    	<input type="number" class="form-control" id="year">
+			    </div>
+			</div>
+		</form>
+		<div class="offset-5">
+			<a class="btn btn-outline-info px-5 mr-5" id="calculateBtn">Calculate</a>
+		</div>
+	</div>
+	<!-- Monthly Result -->
+	<div class="container mt-5" id="loan-form"> 
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th colspan= "2" class="bg-info text-light">Your Loan Payment</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Monthly Payment</td>
+					<td id="month-payment"></td>
+				</tr>
+				<tr>
+					<td>Total Interest</td>
+					<td id="demo"></td>
+				</tr>
+				<tr>
+					<td>Loan Amount</td>
+					<td id="loan-amount"></td>
+				</tr>
+				<tr>
+					<td>Interest Rate</td>
+					<td id="interest-rate"></td>
+				</tr>
+				<tr>
+					<td>Term</td>
+					<td id="term"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<!-- Yearly Result -->
+	<div class="container mt-5" id="over-form">
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th colspan="4" class="bg-info text-light">Loan Payment Over 1 Year</th>
+				</tr>
+				<tr>
+					<th>Month No:</th>
+					<th>Principle</th>
+					<th>Interest</th>
+					<th>Payment</th>
+				</tr>
+			</thead>
+			<tbody id="tbody"></tbody>
+		</table>
+	</div>
+	<!-- JQuery -->
+	<script type="text/javascript" src="bootstrap/js/jquery.min.js"></script>
+	<script type="text/javascript" src="bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#loan-form').hide();
+			$('#over-form').hide();
+			let html;
+			// var totalinterest=0;
+			$('#calculateBtn').click(function() {
+				$('#loan-form').show(1000);
+				$('#over-form').show(1000);
+		        let p = +$('#loan').val();
+		        let r = (+$('#interest').val()/100)/12;
+		        let n = +$('#year').val()*12;
+		        let monthlypayment = p * ( ( r * (1 + r)**n ) / ((1 + r)**n - 1 ));
+		        let result=+(monthlypayment);
+
+		        let montinterest= p*r;
+
+		        let yearinterest = p*r*12;
+
+		        let k = yearinterest;
+		        let totalinterest=0;
+		         // g = yearinterest-montinterest;
+		        $('#month-payment').text(result.toFixed(1));
+		        // $('#total-interest').text(r.toLocaleString());
+		        $('#loan-amount').text(p.toLocaleString());
+		        $('#interest-rate').text($('#interest').val()+'%');
+		        $('#term').text($('#year').val()+"year");
+		        for(i=1;i<=n;i++){
+		        	montinterest=p*r;
+				html+=`<tr>
+							<td>${"Month"+i}</td>
+							<td>${p.toFixed(0).toLocaleString()}</td>
+							<td>${montinterest.toFixed(0)}</td>
+							<td>${result.toFixed(0)}</td>
+						</tr>`
+					k = k - montinterest;
+					totalinterest+=montinterest;
+					// montinterest = k/n;
+					let l = p+montinterest-result;
+					p = l;
+				}
+				$('#demo').html(totalinterest.toFixed(0));
+				// alert(h);
+				$('#tbody').html(html);
+			    });
+		});		
+	</script>
+</body>
+</html>
