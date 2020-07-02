@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>suchi</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+
+	<style type="text/css">
+		.card-footer{
+			background-color: white;
+		}
+		#test ul li .active{
+			background: #dc3545;
+			color: white;
+		}
+		#test ul li a {
+			color:#dc3545;
+		}
+		.card-body p{
+			color: black;
+			font-weight: 600;
+		}		
+	</style>
+</head>
+<body>
+	<div class="container-fluid bg-danger py-4 pl-5	">
+		<div class="title" style="display: flex; margin-left: 30px;">
+			<div class="img">
+				<img src="img/sumosushi.png" width="100px" height="100px">
+			</div>
+			<div class="text text-light" >
+				<span class="txt " style="font-size: 50px">相撲寿司</span><br>
+				<span class="txt " style="font-size: 20px">メニュリスト</span>
+			</div>
+	
+		</div>
+				
+	</div>
+	<!-- content  -->
+		<div class="container my-5">
+			<div class="row" id="test">
+				<div class="col-12 col-md-7">
+					<div class="container shadow pt-3">
+						<ul class="nav nav-pills mb-3 mt-4 nav-justified" id="pills-tab" role="tablist">
+						<!-- Sushi Button -->
+					  	   <li class="nav-item">
+						    	<a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-sushi" role="tab" >Sushi</a>
+						  </li>
+						 <!-- Bento Boxes Button -->
+						  <li class="nav-item">
+						    	<a class="nav-link" id="pills-bento-tab" data-toggle="pill" href="#pills-bento" role="tab">Bento Boxes</a>
+						  </li>
+						  <!-- Ramem Button -->
+						  <li class="nav-item">
+						    <a class="nav-link" id="pills-ramen-tab" data-toggle="pill" href="#pills-ramen" role="tab">Ramen</a>
+						  </li>
+						  <!-- Appetizers Button -->
+						  <li class="nav-item">
+						    	<a class="nav-link" id="pills-appentizer-tab" data-toggle="pill" href="#pills-appentizer" role="tab">Appentizers</a>
+						  </li>
+						  <!-- Rice Button -->
+						  <li class="nav-item" role="presentation">
+						    	<a class="nav-link" id="pills-rice-tab" data-toggle="pill" href="#pills-rice" role="tab">rice</a>
+						  </li>
+						</ul>
+						<!-- Menu -->
+						<div class="tab-content" id="pills-tabContent">
+						<!-- Sushi -->
+						<div class="tab-pane fade show active" id="pills-sushi" role="tabpanel" aria-labelledby="pills-sushi-tab">
+						  	<div class="row p-3">
+						  		<!-- sushi-1 -->
+								<div class="col-12 col-md-4 mb-4">
+									<div class="card text-center" style="position: relative;">
+										<div class="card-img-top">
+											<img src="img/sushi-1.jpg" width="100%" height="100%">
+										</div>
+										<div class="card-body p-0">
+											<p class="text-center mt-3">YUMMY SUCHI</p>
+											<span style="position: absolute;top: 10px;left: 10px; border-radius: 10px;padding: 5px 20px;font-size: 12px;" class="bg-dark text-light">2500ks</span>
+										</div>
+										<div class="card-footer px-2 py-2 bg-transparent">
+											<button class="text-center btn btn-outline-danger btn-block addtoCart" data-id="1" data-name="sushi-one" data-price="2350"style="width: 100%">Add to Cart</button>
+										</div>
+									</div>
+								</div>
+								<!-- sushi-2 -->
+								<div class="col-12 col-md-4 mb-4">
+									<div class="card text-center" style="position: relative;">
+										<div class="card-img-top">
+											<img src="img/sushi-2.jpg" width="100%" height="100%">
+										</div>
+										<div class="card-body p-0">
+											<p class="text-center mt-3">YUMMY SUCHI</p>
+											<span style="position: absolute;top: 10px;left: 10px; border-radius: 10px;padding: 5px 20px;font-size: 12px;" class="bg-dark text-light">2500ks</span>
+										</div>
+										<div class="card-footer px-2 py-2">
+											<button class="text-center btn btn-outline-danger btn-block addtoCart" data-id="2" data-name="sushi-two" data-price="1900" style="width: 100%">Add to Cart</button>
+										</div>
+									</div>
+								</div>
+								<!-- sushi-3 -->
+								<div class="col-12 col-md-4 mb-4">
+									<div class="card text-center" style="position: relative;">
+										<div class="card-img-top">
+											<img src="img/sushi-3.jpg" width="100%" height="100%">
+										</div>
+										<div class="card-body p-0">
+											<p class="text-center mt-3">YUMMY SUCHI</p>
+											<span style="position: absolute;top: 10px;left: 10px; border-radius: 10px;padding: 5px 20px;font-size: 12px;" class="bg-dark text-light">2500ks</span>
+										</div>
+										<div class="card-footer px-2 py-2">
+											<button class="text-center btn btn-outline-danger btn-block addtoCart" data-id="3" data-name="sushi-three" data-price="4800" style="width: 100%">Add to Cart</button>
+										</div>
+									</div>
+								</div>
+								<!-- sushi-4 -->
+								<div class="col-12 col-md-4 mb-4">
+									<div class="card text-center" style="position: relative;">
+										<div class="card-img-top">
+											<img src="img/sushi-4.jpg" width="100%" height="100%">
+										</div>
+										<div class="card-body p-0">
+											<p class="text-center mt-3">YUMMY SUCHI</p>
+											<span style="position: absolute;top: 10px;left: 10px; border-radius: 10px;padding: 5px 20px;font-size: 12px;" class="bg-dark text-light">2500ks</span>
+										</div>
+										<div class="card-footer px-2 py-2">
+											<button class="text-center btn btn-outline-danger btn-block addtoCart " data-id="4" data-name="sushi-four" data-price="2400" style="width: 100%">Add to Cart</button>
+										</div>
+									</div>
+								</div>
+								<!-- sushi-5 -->
+								<div class="col-12 col-md-4 mb-4">
+									<div class="card text-center" style="position: relative;">
+										<div class="card-img-top">
+											<img src="img/sushi-5.jpg" width="100%" height="100%">
+										</div>
+										<div class="card-body p-0">
+											<p class="text-center mt-3">YUMMY SUCHI</p>
+											<span style="position: absolute;top: 10px;left: 10px; border-radius: 10px;padding: 5px 20px;font-size: 12px;" class="bg-dark text-light">2500ks</span>
+										</div>
+										<div class="card-footer px-2 py-2">
+											<button class="text-center btn btn-outline-danger btn-block addtoCart" data-id="5" data-name="sushi-five" data-price="26000" style="width: 100%">Add to Cart</button>
+										</div>
+									</div>
+								</div>
+								<!-- sushi-6 -->
+								<div class="col-12 col-md-4 mb-4">
+									<div class="card text-center" style="position: relative;">
+										<div class="card-img-top">
+											<img src="img/sushi-6.jpg" width="100%" height="100%">
+										</div>
+										<div class="card-body p-0">
+											<p class="text-center mt-3">YUMMY SUCHI</p>
+											<span style="position: absolute;top: 10px;left: 10px; border-radius: 10px;padding: 5px 20px;font-size: 12px;" class="bg-dark text-light">2500ks</span>
+										</div>
+										<div class="card-footer px-2 py-2">
+											<button class="text-center btn btn-outline-danger btn-block addtoCart" data-id="6" data-name="sushi-six" data-price="22500" style="width: 100%">Add to Cart</button>
+										</div>
+									</div>
+								</div>	  
+							</div>
+						  </div>
+						  <!-- Bento boxes -->
+						  <div class="tab-pane fade" id="pills-bento" role="tabpanel" aria-labelledby="pills-bento-tab">
+						  	<div class="row p-3">
+								<div class="col-12 col-md-4 mb-4">
+									<div class="card text-center" style="position: relative;">
+										<div class="card-img-top">
+											<img src="img/bento-1.jpg" width="100%" height="100%">
+										</div>
+										<div class="card-body p-0">
+											<p class="text-center mt-3">YUMMY SUCHI</p>
+											<span style="position: absolute;top: 10px;left: 10px; border-radius: 10px;padding: 5px 20px;font-size: 12px;" class="bg-dark text-light">2500ks</span>
+										</div>
+										<div class="card-footer px-2 py-2">
+											<button class="text-center btn btn-outline-danger btn-block addtoCart" data-id="1" data-name="bento-one" data-price="2350" style="width: 100%">Add to Cart</button>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 col-md-4 mb-4">
+									<div class="card text-center" style="position: relative;">
+										<div class="card-img-top">
+											<img src="img/bento-2.jpg" width="100%" height="100%">
+										</div>
+										<div class="card-body p-0">
+											<p class="text-center mt-3">YUMMY SUCHI</p>
+											<span style="position: absolute;top: 10px;left: 10px; border-radius: 10px;padding: 5px 20px;font-size: 12px;" class="bg-dark text-light">2500ks</span>
+										</div>
+										<div class="card-footer px-2 py-2">
+											<button class="text-center btn btn-outline-danger btn-block addtoCart" style="width: 100%">Add to Cart</button>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 col-md-4 mb-4">
+									<div class="card text-center" style="position: relative;">
+										<div class="card-img-top">
+											<img src="img/bento-3.jpg" width="100%" height="100%">
+										</div>
+										<div class="card-body p-0">
+											<p class="text-center mt-3">YUMMY SUCHI</p>
+											<span style="position: absolute;top: 10px;left: 10px; border-radius: 10px;padding: 5px 20px;font-size: 12px;" class="bg-dark text-light">2500ks</span>
+										</div>
+										<div class="card-footer px-2 py-2">
+											<button class="text-center btn btn-outline-danger btn-block addtoCart" style="width: 100%">Add to Cart</button>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 col-md-4 mb-4">
+									<div class="card text-center" style="position: relative;">
+										<div class="card-img-top">
+											<img src="img/bento-4.jpg" width="100%" height="100%">
+										</div>
+										<div class="card-body p-0">
+											<p class="text-center mt-3">YUMMY SUCHI</p>
+											<span style="position: absolute;top: 10px;left: 10px; border-radius: 10px;padding: 5px 20px;font-size: 12px;" class="bg-dark text-light">2500ks</span>
+										</div>
+										<div class="card-footer px-2 py-2">
+											<button class="text-center btn btn-outline-danger btn-block addtoCart" style="width: 100%">Add to Cart</button>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 col-md-4 mb-4">
+									<div class="card text-center" style="position: relative;">
+										<div class="card-img-top">
+											<img src="img/bento-1.jpg" width="100%" height="100%">
+										</div>
+										<div class="card-body p-0">
+											<p class="text-center mt-3">YUMMY SUCHI</p>
+											<span style="position: absolute;top: 10px;left: 10px; border-radius: 10px;padding: 5px 20px;font-size: 12px;" class="bg-dark text-light">2500ks</span>
+										</div>
+										<div class="card-footer px-2 py-2">
+											<button class="text-center btn btn-outline-danger btn-block addtoCart" style="width: 100%">Add to Cart</button>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 col-md-4 mb-4">
+									<div class="card text-center" style="position: relative;">
+										<div class="card-img-top">
+											<img src="img/bento-2.jpg" width="100%" height="100%">
+										</div>
+										<div class="card-body p-0">
+											<p class="text-center mt-3">YUMMY SUCHI</p>
+											<span style="position: absolute;top: 10px;left: 10px; border-radius: 10px;padding: 5px 20px;font-size: 12px;" class="bg-dark text-light">2500ks</span>
+										</div>
+										<div class="card-footer px-2 py-2">
+											<button class="text-center btn btn-outline-danger btn-block addtoCart" style="width: 100%">Add to Cart</button>
+										</div>
+									</div>
+								</div>	  
+							</div>
+						  </div>
+						  <!-- Ramen -->
+						  <div class="tab-pane fade" id="pills-ramen" role="tabpanel" aria-labelledby="pills-remen-tab">
+						  	<div class="row p-3">
+								<div class="col-12 col-md-4 mb-4">
+									<div class="card text-center" style="position: relative;">
+										<div class="card-img-top">
+											<img src="img/ramen-1.jpg" width="100%" height="100%">
+										</div>
+										<div class="card-body p-0">
+											<p class="text-center mt-3">YUMMY SUCHI</p>
+											<span style="position: absolute;top: 10px;left: 10px; border-radius: 10px;padding: 5px 20px;font-size: 12px;" class="bg-dark text-light">2500ks</span>
+										</div>
+										<div class="card-footer px-2 py-2">
+											<button class="text-center btn btn-outline-danger btn-block addtoCart" style="width: 100%">Add to Cart</button>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 col-md-4 mb-4">
+									<div class="card text-center" style="position: relative;">
+										<div class="card-img-top">
+											<img src="img/ramen-2.jpg" width="100%" height="100%">
+										</div>
+										<div class="card-body p-0">
+											<p class="text-center mt-3">YUMMY SUCHI</p>
+											<span style="position: absolute;top: 10px;left: 10px; border-radius: 10px;padding: 5px 20px;font-size: 12px;" class="bg-dark text-light">2500ks</span>
+										</div>
+										<div class="card-footer px-2 py-2">
+											<button class="text-center btn btn-outline-danger btn-block addtoCart" style="width: 100%">Add to Cart</button>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 col-md-4 mb-4">
+									<div class="card text-center" style="position: relative;">
+										<div class="card-img-top">
+											<img src="img/ramen-1.jpg" width="100%" height="100%">
+										</div>
+										<div class="card-body p-0">
+											<p class="text-center mt-3">YUMMY SUCHI</p>
+											<span style="position: absolute;top: 10px;left: 10px; border-radius: 10px;padding: 5px 20px;font-size: 12px;" class="bg-dark text-light">2500ks</span>
+										</div>
+										<div class="card-footer px-2 py-2">
+											<button class="text-center btn btn-outline-danger btn-block addtoCart" style="width: 100%">Add to Cart</button>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 col-md-4 mb-4">
+									<div class="card text-center" style="position: relative;">
+										<div class="card-img-top">
+											<img src="img/t.jpg" width="100%" height="100%">
+										</div>
+										<div class="card-body p-0">
+											<p class="text-center mt-3">YUMMY SUCHI</p>
+											<span style="position: absolute;top: 10px;left: 10px; border-radius: 10px;padding: 5px 20px;font-size: 12px;" class="bg-dark text-light">2500ks</span>
+										</div>
+										<div class="card-footer px-2 py-2">
+											<button class="text-center btn btn-outline-danger btn-block addtoCart" style="width: 100%">Add to Cart</button>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 col-md-4 mb-4">
+									<div class="card text-center" style="position: relative;">
+										<div class="card-img-top">
+											<img src="img/t.jpg" width="100%" height="100%">
+										</div>
+										<div class="card-body p-0">
+											<p class="text-center mt-3">YUMMY SUCHI</p>
+											<span style="position: absolute;top: 10px;left: 10px; border-radius: 10px;padding: 5px 20px;font-size: 12px;" class="bg-dark text-light">2500ks</span>
+										</div>
+										<div class="card-footer px-2 py-2">
+											<button class="text-center btn btn-outline-danger btn-block addtoCart" style="width: 100%">Add to Cart</button>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 col-md-4 mb-4">
+									<div class="card text-center" style="position: relative;">
+										<div class="card-img-top">
+											<img src="img/t.jpg" width="100%" height="100%">
+										</div>
+										<div class="card-body p-0">
+											<p class="text-center mt-3">YUMMY SUCHI</p>
+											<span style="position: absolute;top: 10px;left: 10px; border-radius: 10px;padding: 5px 20px;font-size: 12px;" class="bg-dark text-light">2500ks</span>
+										</div>
+										<div class="card-footer px-2 py-2">
+											<button class="text-center btn btn-outline-danger btn-block addtoCart" style="width: 100%">Add to Cart</button>
+										</div>
+									</div>
+								</div>	  
+							</div>
+						  </div>
+						  <!-- Appetizers -->
+						  <div class="tab-pane fade show" id="pills-appentizer" role="tabpanel" aria-labelledby="pills-appentizer-tab">
+						  	<div class="row p-3">
+								<div class="col-12 col-md-4 mb-4">
+									<div class="card text-center" style="position: relative;">
+										<div class="card-img-top">
+											<img src="img/appetizer-1.jpg" width="100%" height="100%">
+										</div>
+										<div class="card-body p-0">
+											<p class="text-center mt-3">YUMMY SUCHI</p>
+											<span style="position: absolute;top: 10px;left: 10px; border-radius: 10px;padding: 5px 20px;font-size: 12px;" class="bg-dark text-light">2500ks</span>
+										</div>
+										<div class="card-footer px-2 py-2">
+											<button class="text-center btn btn-outline-danger btn-block addtoCart" style="width: 100%">Add to Cart</button>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 col-md-4 mb-4">
+									<div class="card text-center" style="position: relative;">
+										<div class="card-img-top">
+											<img src="img/appetizer-2.jpg" width="100%" height="100%">
+										</div>
+										<div class="card-body p-0">
+											<p class="text-center mt-3">YUMMY SUCHI</p>
+											<span style="position: absolute;top: 10px;left: 10px; border-radius: 10px;padding: 5px 20px;font-size: 12px;" class="bg-dark text-light">2500ks</span>
+										</div>
+										<div class="card-footer px-2 py-2">
+											<button class="text-center btn btn-outline-danger btn-block addtoCart" style="width: 100%">Add to Cart</button>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 col-md-4 mb-4">
+									<div class="card text-center" style="position: relative;">
+										<div class="card-img-top">
+											<img src="img/appetizer-3.jpg" width="100%" height="100%">
+										</div>
+										<div class="card-body p-0">
+											<p class="text-center mt-3">YUMMY SUCHI</p>
+											<span style="position: absolute;top: 10px;left: 10px; border-radius: 10px;padding: 5px 20px;font-size: 12px;" class="bg-dark text-light">2500ks</span>
+										</div>
+										<div class="card-footer px-2 py-2">
+											<button class="text-center btn btn-outline-danger btn-block addtoCart" style="width: 100%">Add to Cart</button>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 col-md-4 mb-4">
+									<div class="card text-center" style="position: relative;">
+										<div class="card-img-top">
+											<img src="img/appetizer-4.jpg" width="100%" height="100%">
+										</div>
+										<div class="card-body p-0">
+											<p class="text-center mt-3">YUMMY SUCHI</p>
+											<span style="position: absolute;top: 10px;left: 10px; border-radius: 10px;padding: 5px 20px;font-size: 12px;" class="bg-dark text-light">2500ks</span>
+										</div>
+										<div class="card-footer px-2 py-2">
+											<button class="text-center btn btn-outline-danger btn-block addtoCart" style="width: 100%">Add to Cart</button>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 col-md-4 mb-4">
+									<div class="card text-center" style="position: relative;">
+										<div class="card-img-top">
+											<img src="img/appetizer-5.jpg" width="100%" height="100%">
+										</div>
+										<div class="card-body p-0">
+											<p class="text-center mt-3">YUMMY SUCHI</p>
+											<span style="position: absolute;top: 10px;left: 10px; border-radius: 10px;padding: 5px 20px;font-size: 12px;" class="bg-dark text-light">2500ks</span>
+										</div>
+										<div class="card-footer px-2 py-2">
+											<button class="text-center btn btn-outline-danger btn-block addtoCart" style="width: 100%">Add to Cart</button>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 col-md-4 mb-4">
+									<div class="card text-center" style="position: relative;">
+										<div class="card-img-top">
+											<img src="img/appetizer-6.jpg" width="100%" height="100%">
+										</div>
+										<div class="card-body p-0">
+											<p class="text-center mt-3">YUMMY SUCHI</p>
+											<span style="position: absolute;top: 10px;left: 10px; border-radius: 10px;padding: 5px 20px;font-size: 12px;" class="bg-dark text-light">2500ks</span>
+										</div>
+										<div class="card-footer px-2 py-2">
+											<button class="text-center btn btn-outline-danger btn-block addtoCart" style="width: 100%">Add to Cart</button>
+										</div>
+									</div>
+								</div>	  
+							</div>
+						  </div>
+						  <!-- Rice -->
+						  <div class="tab-pane fade show" id="pills-rice" role="tabpanel" aria-labelledby="pills-rice-tab">
+						  	<div class="row p-3">
+								<div class="col-12 col-md-4 mb-4">
+									<div class="card text-center" style="position: relative;">
+										<div class="card-img-top">
+											<img src="img/rice-1.jpg" width="100%" height="100%">
+										</div>
+										<div class="card-body p-0">
+											<p class="text-center mt-3">YUMMY SUCHI</p>
+											<span style="position: absolute;top: 10px;left: 10px; border-radius: 10px;padding: 5px 20px;font-size: 12px;" class="bg-dark text-light">2500ks</span>
+										</div>
+										<div class="card-footer px-2 py-2">
+											<button class="text-center btn btn-outline-danger btn-block addtoCart" style="width: 100%">Add to Cart</button>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 col-md-4 mb-4">
+									<div class="card text-center" style="position: relative;">
+										<div class="card-img-top">
+											<img src="img/rice-2.jpg" width="100%" height="100%">
+										</div>
+										<div class="card-body p-0">
+											<p class="text-center mt-3">YUMMY SUCHI</p>
+											<span style="position: absolute;top: 10px;left: 10px; border-radius: 10px;padding: 5px 20px;font-size: 12px;" class="bg-dark text-light">2500ks</span>
+										</div>
+										<div class="card-footer px-2 py-2">
+											<button class="text-center btn btn-outline-danger btn-block addtoCart" style="width: 100%">Add to Cart</button>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 col-md-4 mb-4">
+									<div class="card text-center" style="position: relative;">
+										<div class="card-img-top">
+											<img src="img/rice-3.jpg" width="100%" height="100%">
+										</div>
+										<div class="card-body p-0">
+											<p class="text-center mt-3">YUMMY SUCHI</p>
+											<span style="position: absolute;top: 10px;left: 10px; border-radius: 10px;padding: 5px 20px;font-size: 12px;" class="bg-dark text-light">2500ks</span>
+										</div>
+										<div class="card-footer px-2 py-2">
+											<button class="text-center btn btn-outline-danger btn-block addtoCart" style="width: 100%">Add to Cart</button>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 col-md-4 mb-4">
+									<div class="card text-center" style="position: relative;">
+										<div class="card-img-top">
+											<img src="img/rice-4.jpg" width="100%" height="100%">
+										</div>
+										<div class="card-body p-0">
+											<p class="text-center mt-3">YUMMY SUCHI</p>
+											<span style="position: absolute;top: 10px;left: 10px; border-radius: 10px;padding: 5px 20px;font-size: 12px;" class="bg-dark text-light">2500ks</span>
+										</div>
+										<div class="card-footer px-2 py-2">
+											<button class="text-center btn btn-outline-danger btn-block addtoCart" style="width: 100%">Add to Cart</button>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 col-md-4 mb-4">
+									<div class="card text-center" style="position: relative;">
+										<div class="card-img-top">
+											<img src="img/t.jpg" width="100%" height="100%">
+										</div>
+										<div class="card-body p-0">
+											<p class="text-center mt-3">YUMMY SUCHI</p>
+											<span style="position: absolute;top: 10px;left: 10px; border-radius: 10px;padding: 5px 20px;font-size: 12px;" class="bg-dark text-light">2500ks</span>
+										</div>
+										<div class="card-footer px-2 py-2">
+											<button class="text-center btn btn-outline-danger btn-block addtoCart" style="width: 100%">Add to Cart</button>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 col-md-4 mb-4">
+									<div class="card text-center" style="position: relative;">
+										<div class="card-img-top">
+											<img src="img/t.jpg" width="100%" height="100%">
+										</div>
+										<div class="card-body p-0">
+											<p class="text-center mt-3">YUMMY SUCHI</p>
+											<span style="position: absolute;top: 10px;left: 10px; border-radius: 10px;padding: 5px 20px;font-size: 12px;" class="bg-dark text-light">2500ks</span>
+										</div>
+										<div class="card-footer px-2 py-2">
+											<button class="text-center btn btn-outline-danger btn-block addtoCart" style="width: 100%">Add to Cart</button>
+										</div>
+									</div>
+								</div>	  
+							</div>
+						  </div>
+						</div>
+					</div>									
+				</div>
+				<!-- Payment -->
+				<div class="col-12 col-md-5 " id="voucher_div">
+					<div class="container p-3 shadow">
+						<h4 class="text-center mb-3">Payment</h4>
+						<table class="table table-bordered table-responsive">
+							  <thead class="thead-light">
+							    <tr>
+							      <th scope="col">Name</th>
+							      <th scope="col">Qty</th>
+							      <th scope="col">Price</th>
+							      <th scope="col">Remove</th>
+							    </tr>
+							  </thead>
+							  <tbody></tbody>
+							  <tfoot></tfoot>
+						</table>						
+					</div>
+				</div>
+			</div>
+			
+		</div>
+
+	<script type="text/javascript" src="bootstrap/js/jquery.min.js"></script>
+	<script type="text/javascript" src="bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script type="text/javascript" src="localstorage.js"></script>		
+	
+</body>
+</html>
